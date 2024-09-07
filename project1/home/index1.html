@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government of NCT Delhi</title>
+    <link rel="icon" href="delhi.png">
+    <link rel="stylesheet" href="../style1.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-top">
+            <!-- Logo Section -->
+            <img src="../emblem-gov.svg" alt="Logo" class="logo">
+            <!-- College Name and Tagline -->
+            <div class="header-text">
+                <h1>Government of National Capital Territory of Delhi</h1>
+                <span><h1><pre>    राष्ट्रीय राजधानी क्षेत्र दिल्ली सरकार</pre></h1></span>
+            </div>
+            <!-- Header Actions: FAQs, Language Selector, Font Size -->
+            <div class="header-actions">
+                <!-- <a href="#" class="faq-link">FAQs</a> -->
+                <div class="language-selector">
+                    <label for="language">Select Language:</label>
+                    <select id="language">
+                        <option value="english">English</option>
+                        <option value="hindi">हिन्दी</option>
+                    </select>
+                </div>
+                <div class="Login">
+                    <button class="font-size-btn">Login</button>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="../dashboard.html" class="nav-link">Patient Portal</a></li>
+                <li><a href="../Doctors.html" class="nav-link">Doctors</a></li>
+                <li><a href="../opd1.html" class="nav-link" >OPD </a></li>
+                <li><a href="../department.html" class="nav-link">Departments</a></li>
+                <li><a href="../about.html" class="nav-link">About Us</a></li>
+            </ul>
+            <!-- Search and Action Buttons -->
+            <div class="header-buttons">
+                <input type="text" placeholder="Search...">
+                <!-- <button>Book appointment</button>
+                <button class="donate-btn">Give to HMC</button> -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Hero Section with Image Slider -->
+        <div class="hero-section">
+            <div class="slider">
+                <div class="slides">
+                    <!-- Add your images here -->
+                    <div class="slide">
+                        <img src="../gov delhi 1.jpg" alt="Hospital Image 1">
+                    </div>
+                    <div class="slide">
+                        <img src="../gov delhi 2.jpg" alt="Hospital Image 2">
+                    </div>
+                    <div class="slide">
+                        <img src="../gov delhi 3.jpg" alt="Hospital Image 3">
+                    </div>
+                    <div class="slide">
+                        <img src="../gov delhi 4.jpg" alt="Hospital Image 3">
+                    </div>
+                    <div class="slide">
+                        <img src="../gov delhi 5.png" alt="Hospital Image 3">
+                    </div>
+                </div>
+                <!-- Controls -->
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+            <!-- <div class="hero-text">
+                <h2>Celebrating Excellence in Medical Education</h2>
+            </div> -->
+            <!-- What's New Section -->
+            <!-- <div class="whats-new">
+                <span>What's New</span>
+            </div> -->
+        </div>
+
+        <!-- Statistics Section -->
+<section class="statistics-section">
+    <h2 class="section-title">Our Impact in Numbers</h2>
+    <div class="stats-container">
+        <!-- Statistic Card 1 -->
+        <div class="stat-card">
+            <!-- <img src="patient-icon.png" alt="Patients Treated Icon" class="stat-icon"> -->
+            <h3 class="stat-number" data-count="500000">0</h3>
+            <p class="stat-description">Patients Treated</p>
+        </div>
+        <!-- Statistic Card 2 -->
+        <div class="stat-card">
+            <!-- <img src="C:\Users\govin\OneDrive\Pictures\Screenshots\Screenshot 2024-09-03 195605.png" alt="Qualified Doctors Icon" class="stat-icon" height="100px"> -->
+            <h3 class="stat-number" data-count="120">0</h3>
+            <p class="stat-description">Qualified Doctors</p>
+        </div>
+        <!-- Statistic Card 3 -->
+        <div class="stat-card">
+            <!-- <img src="hospital-icon.png" alt="Hospitals Icon" class="stat-icon"> -->
+            <h3 class="stat-number" data-count="25">0</h3>
+            <p class="stat-description">Hospitals Across Delhi</p>
+        </div>
+        <!-- Statistic Card 4
+        <div class="stat-card">
+            <img src="years-icon.png" alt="Years of Service Icon" class="stat-icon">
+            <h3 class="stat-number" data-count="50">0</h3>
+            <p class="stat-description">Years of Service</p>
+        </div> -->
+    </div>
+</section>
+
+<!-- JavaScript for Number Counter Animation -->
+<script>
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200; // Adjust the speed of the counter
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 20);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        // Trigger counter when the section is visible
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        });
+
+        observer.observe(counter);
+    });
+</script>
+
+        
+
+          
+
+        <!-- Info Cards Section -->
+        <section class="info-cards">
+            <div class="card">
+                <img src="../doctor.jpeg" alt="Doctor Icon" class="card-icon">
+                <h3>Our Doctors</h3>
+                <p>Search by name, specialty, location and more.</p>
+                <a href="../Doctors.html" class="card-button">Find a doctor</a>
+            </div>
+            <div class="card">
+                <img src="../location copy.jpeg" alt="locations" class="card-icon">
+                <h3>Locations & Directions</h3>
+                <p>Find any of our 300+ locations.</p>
+                <a href="https://www.google.co.in/maps/@28.5071785,77.4538971,12.65z?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"class="card-button">Get directions</a>
+            </div>
+            <div class="card">
+                <img src="../appointment.webp" alt="Appointment Icon" class="card-icon">
+                <h3>Appointments</h3>
+                <p>Get the in-person or virtual care you need.</p>
+                <a href="../Book Appointement.html" class="card-button">Schedule now</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Contact Information Section -->
+                <div class="footer-section contact">
+                    <img src="../emblem-gov.svg" alt="Hindu Medical College Noida Logo" class="footer-logo"  height="50px">
+                    <p>Government of National Capital Territory of Delhi</p>
+                    <p>Ida Scudder Road, Delhi – 201301</p>
+                    <p>Delhi, India.</p>
+                    <p><strong>General:</strong> 0120-1234567, +91 9876543210</p>
+                    <p><strong>Patient Related:</strong> +91 8000123456</p>
+                    <p><strong>Whatsapp:</strong> +91 9123456789</p>
+                    <p><strong>Email:</strong> info@hmcnoida.ac.in</p>
+                </div>
+                <!-- Quick Links Section -->
+                <div class="footer-section quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">Careers / Vacancies</a></li>
+                        <li><a href="#">Year Books</a></li>
+                        <li><a href="#">Facts and Figures</a></li>
+                        <li><a href="#">E-Meds</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Weekly News</a></li>
+                    </ul>
+                </div>
+                <!-- Working Hours Section -->
+                <div class="footer-section working-hours">
+                    <h4>Working Hours</h4>
+                    <p>Mon-Fri: 8 am to 4.30 pm</p>
+                    <p>Sat: 8 am to 12 pm</p>
+                    <h4>Feedback To</h4>
+                    <p>Public Relations Office,</p>
+                    <p><strong>Email:</strong> pro@nct.ac.in</p>
+                </div>
+            </div>
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Government of National Capital Territory of Delhi</p>
+                <div class="footer-icons">
+                    <a href="#"><img src="email.jpg" alt="Mail"></a>
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="youtube.jpeg" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        showSlide(slideIndex);
+
+        function moveSlide(n) {
+            showSlide(slideIndex += n);
+        }
+
+        function showSlide(n) {
+            if (n >= slides.length) slideIndex = 0;
+            if (n < 0) slideIndex = slides.length - 1;
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[slideIndex].style.display = 'block';
+        }
+
+        setInterval(() => {
+            moveSlide(1);
+        }, 2000); // Auto-slide every 2 seconds
+    </script>
+</body>
+</html>

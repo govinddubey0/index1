@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #222831;
+    color: #EEEEEE;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #03346E;
+}
+
+.navbar .navbar-brand {
+    color: #f5f6f6;
+}
+
+.navbar .nav-link {
+    color: #EEEEEE;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: #00ADB5;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, rgba(34, 40, 49, 0.8), rgba(34, 40, 49, 0.6)),
+    url('../assets/images/hero-bg.jpg') center/cover;
+    padding: 120px 0;
+    color: #EEEEEE;
+}
+
+.hero h1, .hero p, .hero .btn {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero .btn {
+    background-color: #00ADB5;
+    color: #EEEEEE;
+}
+
+.hero .btn:hover {
+    background-color: #CAF4FF;
+    color: #0D0D0D;
+}
+
+/* Steps Section */
+.steps-section {
+    background-color:  #dbf6fc;
+    padding: 60px 0;
+    color: #EEEEEE;
+}
+
+.step-box {
+    background-color: #222831;
+    color: #EEEEEE;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+    border: 2px solid #00ADB5;
+}
+
+.step-box:hover {
+    transform: scale(1.05);
+}
+
+.step-box h4 {
+    color: #CAF4FF;
+}
+
+/* Appointment Section */
+.appointment-section {
+    background-color: #222831;
+    padding: 40px 0;
+}
+
+.appointment-section .btn-primary {
+    background-color: #5AB2FF;
+}
+
+.appointment-section .btn-success {
+    background-color: #00ADB5;
+}
+
+.appointment-section .btn-info {
+    background-color: #A0DEFF;
+}
+
+/* Highlights Section */
+.highlights-section {
+    background-color:  #dbf6fc;
+    color: #222831;
+}
+
+.highlight-card {
+    background-color: #222831;
+    color: #EEEEEE;
+}
+
+.highlight-title {
+    color: #A0DEFF;
+}
+
+/* OPD Section */
+.opd-section {
+    background-color: #dbf6fc;
+    color:#222831;
+}
+
+.facility-card {
+    background-color: #222831;
+    border: 2px solid #00ADB5;
+}
+
+.facility-title {
+    color: #CAF4FF;
+}
+
+/* Footer */
+footer {
+    background-color: #222831;
+    color: #EEEEEE;
+}

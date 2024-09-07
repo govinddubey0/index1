@@ -1,0 +1,124 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #393E46;
+    color: white;
+    padding: 1em 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+header nav {
+    margin-top: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#222831;
+    padding: 2em 0;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 2em;
+    background-color: #00ADB5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 1.5em;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: white;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form select {
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 5px;
+    border: 1px solid #FFFFFF;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #FFFFFF;
+    color: #00ADB5;
+    border: none;
+    padding: 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #EEEEEE;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #393E46;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+        padding: 1.5em;
+    }
+}

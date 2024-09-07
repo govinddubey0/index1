@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="dashboard-scripts.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#dashboard" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="#opd-queue"><i class="fas fa-hospital-user"></i> OPD Queue Management</a></li>
+            <li><a href="#bed-management"><i class="fas fa-bed"></i> Bed Management System</a></li>
+            <li><a href="#patient-admission"><i class="fas fa-user-plus"></i> Patient Admission System</a></li>
+            <li><a href="#real-time-alerts"><i class="fas fa-bell"></i> Real-Time Alerts</a></li>
+            <li><a href="#calendar"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-content">
+                <h1 id="dashboard">Hospital Management Dashboard</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search..." aria-label="Search" />
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </header>
+
+        <!-- OPD Queue Management section -->
+        <section class="opd-queue" id="opd-queue">
+            <h2>OPD Queue Management</h2>
+            <p>Manage and track the queue for outpatient services. Estimated wait time updates in real-time.</p>
+            <div class="card">
+                <p>Current Queue: 15 Patients</p>
+                <p>Estimated Wait Time: 25 minutes</p>
+                <small>Last updated: <span id="queue-timestamp">Just now</span></small>
+                <button class="btn-update">Update Queue</button>
+            </div>
+        </section>
+
+        <!-- Bed Management System section -->
+        <section class="bed-management">
+            <h2>Bed Availability</h2>
+    
+            <!-- Dropdown for selecting hospital -->
+            <div class="dropdown-section">
+                <label for="hospital-select">Select Hospital:</label>
+                <select id="hospital-select">
+                    <option value="hospital1">Hospital 1</option>
+                    <option value="hospital2">Hospital 2</option>
+                    <option value="hospital3">Hospital 3</option>
+                </select>
+            </div>
+    
+            <!-- Dropdown for selecting department -->
+            <div class="dropdown-section">
+                <label for="department-select">Select Department:</label>
+                <select id="department-select">
+                    <option value="general">General Ward</option>
+                    <option value="icu">ICU</option>
+                    <option value="critical">Critical Care</option>
+                </select>
+            </div>
+    
+            <!-- View Beds Button -->
+            <button id="view-beds-button" class="btn-view-beds">View Beds</button>
+    
+            <!-- Bed layout grid -->
+            <div id="bed-grid" class="bed-grid">
+                <!-- Beds will be dynamically rendered here -->
+            </div>
+    
+            <!-- Bed legend -->
+            <div class="legend">
+                <div><span class="available"></span> Available</div>
+                <div><span class="occupied"></span> Occupied</div>
+                <div><span class="reserved"></span> Reserved</div>
+            </div>
+        </section>
+
+        <!-- Patient Admission System section -->
+        <section class="patient-admission" id="patient-admission">
+            <h2>Patient Admission System</h2>
+            <p>Streamline the process of admitting new patients quickly and efficiently.</p>
+            <div class="card">
+                <p>Admit New Patient</p>
+                <button class="btn-admit">Admit Patient</button>
+            </div>
+        </section>
+
+        <!-- Real-Time Alerts section -->
+        <section class="real-time-alerts" id="real-time-alerts">
+            <h2>Real-Time Alerts</h2>
+            <p>Receive real-time updates and alerts for critical events in the hospital.</p>
+            <div class="card alert-card">
+                <i class="fas fa-bell"></i>
+                <p>No new alerts</p>
+                <small>Last updated: Just now</small>
+            </div>
+        </section>
+
+        <!-- Calendar section -->
+        <section class="calendar" id="calendar">
+            <h2>Hospital Calendar</h2>
+            <p>Manage upcoming events, patient appointments, and staff schedules.</p>
+            <div class="calendar-widget">
+                <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=your_timezone" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Hospital Management System | <a href="#">Privacy Policy</a> | <a href="#">FAQ</a> | <a href="#">Help Center</a></p>
+        <p>Contact us at: support@hospital.com | Phone: +123456789</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #393E46; /* Background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #00ADB5;
+            color: white;
+            padding: 1em 0;
+            border-radius: 0 0 20px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        header nav {
+            margin-top: 1em;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: inline-flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px; /* Increased form width */
+            margin: 50px auto;
+            background-color: #00ADB5;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 28px; /* Larger title */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: white;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        .btn-appointment {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #222831;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover,
+        .btn-appointment:hover {
+            background-color: #0056b3; /* Darker shade for hover effect */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #00ADB5;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            border-radius: 20px 20px 0 0;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-form {
+                width: 90%;
+                padding: 1.5em;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="opd1.html">OPD Services</a></li>
+                <li><a href="Book Appointment.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Book an Appointment</h2>
+        <form id="patientForm" method="post" action="/appointment">
+            <div class="form-group">
+                <label for="nameInput">Full Name</label>
+                <input type="text" id="name" placeholder="Enter Full Name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="numberInput">Mobile Number</label>
+                <input type="text" id="phone" placeholder="Enter Mobile Number" name="number">
+            </div>
+
+            <div class="form-group">
+                <label for="emailInput">Email Address</label>
+                <input type="email" id="email" placeholder="Enter Email Address" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="addressInput">Address</label>
+                <input type="text" id="address" placeholder="Enter Your Address" name="address">
+            </div>
+
+            <div class="form-group">
+                <label for="dateInput">Appointment Date</label>
+                <input type="date" id="dateInput" name="date">
+            </div>
+
+            <div class="form-group">
+                <label for="timeSlot">Select Time Slot:</label>
+                <select id="timeSlot" name="time_slot">
+                    <option value="" disabled selected>Select a time slot</option>
+                    <option value="00:00 - 01:00">00:00 - 01:00</option>
+                    <option value="01:00 - 02:00">01:00 - 02:00</option>
+                    <option value="02:00 - 03:00">02:00 - 03:00</option>
+                    <option value="03:00 - 04:00">03:00 - 04:00</option>
+                    <option value="04:00 - 05:00">04:00 - 05:00</option>
+                    <option value="05:00 - 06:00">05:00 - 06:00</option>
+                    <option value="06:00 - 07:00">06:00 - 07:00</option>
+                    <option value="07:00 - 08:00">07:00 - 08:00</option>
+                    <option value="08:00 - 09:00">08:00 - 09:00</option>
+                    <option value="09:00 - 10:00">09:00 - 10:00</option>
+                    <option value="10:00 - 11:00">10:00 - 11:00</option>
+                    <option value="11:00 - 12:00">11:00 - 12:00</option>
+                    <option value="12:00 - 13:00">12:00 - 13:00</option>
+                    <option value="13:00 - 14:00">13:00 - 14:00</option>
+                    <option value="14:00 - 15:00">14:00 - 15:00</option>
+                    <option value="15:00 - 16:00">15:00 - 16:00</option>
+                    <option value="16:00 - 17:00">16:00 - 17:00</option>
+                    <option value="17:00 - 18:00">17:00 - 18:00</option>
+                    <option value="18:00 - 19:00">18:00 - 19:00</option>
+                    <option value="19:00 - 20:00">19:00 - 20:00</option>
+                    <option value="20:00 - 21:00">20:00 - 21:00</option>
+                    <option value="21:00 - 22:00">21:00 - 22:00</option>
+                    <option value="22:00 - 23:00">22:00 - 23:00</option>
+                    <option value="23:00 - 00:00">23:00 - 00:00</option>
+                    <!-- Time slot options -->
+                    <!-- (same as provided in the original code) -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="diseaseInput">Select Speciality:</label>
+                <select id="service" name="service">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Medicine">Medicine</option>
+                    <option value="Orthopedic">Orthopedic</option>
+                    <option value="Mental Health">Mental Health</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="COVID-19">COVID-19</option>
+                    <option value="Dermatology">Dermatology</option>
+                    <option value="Dentistry">Dentistry</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Pediatrics">Pediatrics</option>
+                    <option value="Infectious Diseases">Infectious Diseases</option>
+                    <option value="ENT">ENT (Otolaryngology)</option>
+                    <option value="Plastic Surgery">Plastic Surgery</option>
+                    <option value="Radiology">Radiology</option>
+                    <option value="Pulmonology">Pulmonology</option>
+                    <option value="Gastroenterology">Gastroenterology</option>
+                    <!-- Speciality options -->
+                    <!-- (same as provided in the original code) -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="doctorName">Select Doctor:</label>
+                <select id="doctorName" name="doctorName">
+                    <option value="" disabled selected>Select a doctor</option>
+                    <option value="Doctor A">Doctor A</option>
+                    <option value="Doctor B">Doctor B</option>
+                    <option value="Doctor C">Doctor C</option>
+                </select>
+                    <!-- Doctor options -->
+                    <!-- (same as provided in the original code) -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button class="btn-appointment" type="submit">Book Appointment</button>
+            </div>
+        </form>
+
+        <!-- QR Code Section -->
+        <div class="qr-code" id="qrCodeContainer"></div>
+    </div>
+
+    <script>
+        document.getElementById('patientForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                date: document.getElementById('dateInput').value,
+                time_slot: document.getElementById('timeSlot').value,
+                service: document.getElementById('service').value,
+                doctor_name: document.getElementById('doctorName').value
+            };
+            try {
+                const response = await fetch('http://localhost:8000/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ 
+                    name:formData.name, 
+                    phone:formData.phone,
+                    email:formData.email ,
+                    address:formData.address ,
+                    dateInput:formData.date,
+                    time_slot:formData.timeSlot,
+                    service:formData.service,
+                    doctor_name:formData.doctorName }),
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.qr_code) {
+                    document.getElementById('qrCodeContainer').innerHTML = `<img src="data:image/png;base64,${result.qr_code}" alt="QR Code"><p>Patient ID: ${result.patient_id}</p>`;
+                } else {
+                    alert('Registration failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Government of National Capital Territory of Delhi, Noida. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
